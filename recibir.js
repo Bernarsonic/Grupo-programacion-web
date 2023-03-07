@@ -1,18 +1,21 @@
-const dat = localStorage.getItem('cadenaJSON')
-datos= JSON.parse(dat)
-console.log(datos)
+// Obtener los datos desde el almacenamiento local
+const dat = localStorage.getItem('cadenaJSON');
+const datos = JSON.parse(dat) || []; // En caso de que no haya datos, se establece como una matriz vacía
 
-const datosContainer = document.getElementById('datos-container')
+// Obtener la referencia al contenedor de datos en la página
+const datosContainer = document.getElementById('datos-container');
 
 // Crear una plantilla de cadena HTML para mostrar los datos
 const datosHTML = `
   <h2>Datos:</h2>
   <ul>
-    <li>Nombre: ${datos.nombre}</li>
-    <li>Edad: ${datos.edad}</li>
-    <li>Email: ${datos.email}</li>
+    ${datos.map(dato => `
+      <li>Titulo: ${dato.titulo}</li>
+      <li>Autor: ${dato.autor}</li>
+      <li>Email: ${dato.email}</li>
+    `).join('')}
   </ul>
-`
+`;
 
 // Agregar la plantilla al contenedor de datos
-datosContainer.innerHTML = datosHTML
+datosContainer.innerHTML = datosHTML;
