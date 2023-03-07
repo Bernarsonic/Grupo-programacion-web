@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="novedades.css"><!--Enlace del CSS-->
+</head>
+
+<body>
+
+<div id="nav"><!-- Barra superior del menú -->
+
+    <nav class="navbar navbar-expand-lg"> <!-- Barra superior con los enlaces con bootrap -->
+
+        <button type="button" data-target="#MinimizaNav" data-toggle="collapse" class="navbar-toggler"> <!-- Es el botún del munú haburgesa que compacta la lista de abajo -->
+
+            <span class="navbar-toggler-icon"> </span> <!-- Icono del menú hamburgesa -->
+
+        </button>
+
+        <div id="MinimizaNav" class="collapse navbar-collapse"> <!-- Caja de la lista del menú aplicando bootrap -->
+
+
+            <ul class="navbar-nav mr-auto"> <!-- Es una lista de los distintos enlaces a diferentes destinos -->
+
+                <li class="nav-item active"> <!-- Elemento de la lista del menú -->
+
+                    <a href="index.html" class="nav-link"> <!-- Enlace que redirige hacia otro html -->
+
+                        Inicio
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item"> <!-- Elemento de la lista del menú -->
+
+                    <a href="novedades.html" class="nav-link"> <!-- Enlace que redirige hacia otro html -->
+
+                        Novedades
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item"> <!-- Elemento de la lista del menú -->
+
+                    <a href="Top3.html" class="nav-link"> <!-- Enlace que redirige hacia otro html -->
+
+                        Top 3
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item"> <!-- Elemento de la lista del menú -->
+
+                    <a href="interpretes.html" class="nav-link"> <!-- Enlace que redirige hacia otro html -->
+
+                        Intérpretes
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item"> <!-- Elemento de la lista del menú -->
+
+                    <a href="ranking.html" class="nav-link"> <!-- Enlace que redirige hacia otro html -->
+
+                        Ranking
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> <!-- Escript relacionado con el menu hamburgesa -->
+
+        <script src="js/bootstrap.min.js"></script> <!-- Escript relacionado con el menu hamburgesa -->
+
+    </nav>
+
+
+</div>
+
+    <div class="container" id="registration-form">
+
+        <div class="frm">
+
+            <h1>
+                Suscripción
+            </h1>
+
+            <form>
+
+                <div class="form-group">
+
+                    <label>
+                        Titulo
+                    </label>
+
+                    <input type="text" class="form-control"  placeholder="Introduce el título">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Descripción
+                    </label>
+
+                    <input type="text" class="form-control"  placeholder="Introduce la descripción">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Link
+                    </label>
+
+                    <input type="text" class="form-control"  placeholder="Inserta la URL">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Autor
+                    </label>
+
+                    <input type="text" class="form-control" id="email" placeholder="Enter email">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Categoria
+                    </label>
+
+                    <input type="text" class="form-control" placeholder="Introduce la categoria">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Fecha
+                    </label>
+
+                    <input type="text" class="form-control" placeholder="Enter password">
+
+                </div>
+
+                <div id="Boton">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg">Subcrición</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg">Vaciar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
