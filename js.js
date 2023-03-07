@@ -12,13 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const fecha = document.getElementById("fecha").value;
 
 
-// Leer los datos existentes en localStorage
-        const contenidoAnterior = localStorage.getItem('cadenaJSON');
-        let datosAnteriores = [];
-        if (contenidoAnterior) {
-            // Convierte la cadena JSON en un objeto JavaScript
-            datosAnteriores = JSON.parse(contenidoAnterior);
-        }
+// Obtener los datos existentes del localStorage
+        let datosAnteriores = JSON.parse(localStorage.getItem('cadenaJSON')) || [];
+
         //Aqui se meten los datos
         const noticia ={
             titulo: titulo,
@@ -30,15 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         datosAnteriores.push(noticia);
 
-// Convierte el objeto JavaScript en una cadena JSON
-        const nuevoContenido = JSON.stringify(datosAnteriores);
 
-// Guardar la cadena JSON en localStorage
-        localStorage.setItem('cadenaJSON', nuevoContenido);
+// Guardar los datos actualizados en el localStorage
+    localStorage.setItem('cadenaJSON', JSON.stringify(datosAnteriores));
 
 
         //imprime en la consola
-        console.log(nuevoContenido)
+        console.log(noticia)
     }
 
     function borrar() {
