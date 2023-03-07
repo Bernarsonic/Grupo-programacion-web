@@ -7,9 +7,9 @@ const datosContainer = document.getElementById('datos-container');
 
 // Crear una plantilla de cadena HTML para mostrar los datos
 const datosHTML = `
-  <h2>Datos:</h2>
+  <h2>Últimos 5 datos:</h2>
   <ul>
-    ${datos.map(dato => `
+    ${datos.slice(-5).map(dato => `
       <li>Titulo: ${dato.titulo}</li>
       <li>Autor: ${dato.autor}</li>
       <li>Email: ${dato.email}</li>
