@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const autor = document.getElementById("autor").value;
         const categoria = document.getElementById("categoria").value;
         const fecha = document.getElementById("fecha").value;
+        
 
 
 // Obtener los datos existentes del localStorage
@@ -46,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const botonSumit = document.getElementById('BotonS');
     botonSumit.addEventListener('click', coger_datos);
+    botonSumit.addEventListener('click', borrar);
+
 
     const botonVaciar = document.getElementById("BotonV");
     botonVaciar.addEventListener('click', borrar);

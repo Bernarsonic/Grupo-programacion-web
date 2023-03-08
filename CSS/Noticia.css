@@ -11,3 +11,8 @@ article{
     margin: 5% 25% 5% 25%;
     border-radius: 25px;
 }
+
+#datos-container ul{
+    display: flex;
+    flex-direction: column-reverse;
+}
