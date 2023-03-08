@@ -15,4 +15,6 @@ article{
 #datos-container ul{
     display: flex;
     flex-direction: column-reverse;
+    border-radius: 25px;
+    box-shadow:2px 2px 8px #c9c9c9;
 }
