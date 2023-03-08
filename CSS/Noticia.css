@@ -1,5 +1,6 @@
 html {
     background: url("../Img/Bondo1.jpg") no-repeat;
+    font-family: Arial, serif;
 }
 article{
     display: flex;
@@ -13,20 +14,20 @@ article{
 }
 
 #datos-container ul{
-    display: flex;
-    flex-direction: column-reverse;
     list-style: none;
+    padding: 20px;
 }
 
 #datos-container ul h1{
     display: flex;
-    justify-content: end;
+    text-decoration: none;
+
+
 }
-#datos-container ol{
+#datos-container ul{
     border-radius: 25px;
     box-shadow:2px 2px 8px #c9c9c9;
     min-width: 135px;
-
     padding-top: 1px;
     padding-bottom: 15px;
 }

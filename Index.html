@@ -27,16 +27,16 @@
 
                         <li>
                             <a href="Noticia.html">
-                                Noticia
+                               Listado de noticias
                             </a>
                         </li>
                         <li >
-                            <button onclick="generarRSS()">
+                            <button onclick="generarRSS()" class="rss">
                                 Rss
                             </button>
                         </li>
                         <li href="index.html">
-                            <a>
+                            <a href="#">
                                 Suscripción
                             </a>
                         </li>
@@ -63,7 +63,7 @@
                                 Titulo
                             </label>
 
-                            <label for="titulo"></label><input type="text" class="form-control" placeholder="Introduce el título" id="titulo" required pattern="([a-z A-Z]{1,50})">
+                            <label for="titulo"></label><input type="text" class="form-control" placeholder="Introduce el título" id="titulo" pattern="([a-z A-Z]{1,50})" required>
 
                         </div>
 

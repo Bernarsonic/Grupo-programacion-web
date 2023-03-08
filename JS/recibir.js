@@ -34,13 +34,9 @@ for(var b=0; b< datos.length; b++){
     // Escribo el "html" personalizado
     html = html + `
   <br>
-  <ol>
+  <ul>
   <li><h1><a href="${enlace}">${datos[b].titulo}</a></h1></li>
-  <li><b>Fecha:</b> ${datos[b].fecha}</li>  
-  <li><b>Categoría:</b> ${datos[b].categoria}</li>
-  <li><b>Descripción:</b> ${datos[b].descripcion}</li>
-  <li><b>Autor:</b> ${datos[b].autor}</li>
-  </ol>
+  </ul>
   <br>
   `
     ;

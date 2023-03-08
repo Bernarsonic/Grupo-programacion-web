@@ -145,3 +145,10 @@ ul {
 	margin-top: 0;
 	margin-bottom: 10px;
 }
+
+.rss{
+	background: #24252A;
+	border: none;
+	color: white;
+	cursor: pointer;
+}

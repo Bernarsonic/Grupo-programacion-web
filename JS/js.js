@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-
-
     function coger_datos() {
         // Captura de valores
         const titulo = document.getElementById("titulo").value;
