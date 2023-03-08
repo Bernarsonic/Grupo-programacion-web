@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Registration Form</title>
+        <link rel="icon" href="Img/indice.ico">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <script src="JS/Rss.js" defer></script>
+    </head>
+
+    <body>
+
+    <script src="JS/js.js"></script>
+
+
+
+        <!-- BARRA NAVEGACIÓN -->
+            <nav>
+                <div id="barra">
+
+                    <img src="Img/indice.ico" id="imagen" alt="Logo">
+                    
+                    <ul>
+
+                        <li>
+                            <a href="Noticia.html">
+                                Noticia
+                            </a>
+                        </li>
+                        <li >
+                            <button onclick="generarRSS()">
+                                Rss
+                            </button>
+                        </li>
+                        <li href="index.html">
+                            <a>
+                                Suscripción
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+
+
+            <div class="container" id="registration-form">
+
+                <div class="frm">
+
+                    <h1>
+                        Suscripción
+                    </h1>
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label>
+                                Titulo
+                            </label>
+
+                            <label for="titulo"></label><input type="text" class="form-control" placeholder="Introduce el título" id="titulo" required pattern="([a-z A-Z]{1,50})">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+                                Descripción
+                            </label>
+
+                            <label for="descripcion"></label><input type="text" class="form-control" placeholder="Introduce la descripción" id="descripcion" pattern="([a-z A-Z]{1,100})">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+                                Link
+                            </label>
+
+                            <label for="url"></label><input type="text" class="form-control" placeholder="Inserta la URL" id="url">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+                                Autor
+                            </label>
+
+                            <label for="autor"></label><input type="text" class="form-control" placeholder="Inserta la autor" id="autor" pattern="([a-z A-Z]{1,50})">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+                                Categoria
+                            </label>
+
+                            <label for="categoria"></label><input type="text" class="form-control" placeholder="Introduce la categoria" id="categoria">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+                                Fecha
+                            </label>
+
+                            <label for="fecha"></label><input type="date" class="form-control" placeholder="Enter date" id="fecha">
+
+                        </div>
+
+                    </form>
+
+                    <div id="Boton">
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-success btn-lg" id="BotonS">
+                                Suscripción
+                            </button>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-success btn-lg" id="BotonV">
+                                Vaciar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+    </body>
+
+</html>
