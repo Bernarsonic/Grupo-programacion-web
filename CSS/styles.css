@@ -1,5 +1,5 @@
 html{
-    background: url("background.jpg") no-repeat;
+    background: url("../Img/background.jpg") no-repeat;
 	background-size: cover;
     min-height: 100%;
 }
@@ -27,7 +27,7 @@ body{
 
 #registration-form .image{
 	float:left;
-	background-image: url("desk.jpg");
+	background-image: url("../Img/desk.jpg");
 	height: 500px;
 	width: 50%;
 	background-size: cover;
@@ -102,9 +102,8 @@ body{
 /* Menú superior (franja) */
 nav {
 	background-color:#24252A ;
-	padding: 10px 15px 10px 10px;
-	justify-content: space-between;
-	display: flex;
+	padding: 20px 15px 20px 20px;
+
 }
 
 nav ul{
@@ -122,4 +121,22 @@ nav a {
 	padding-left: 20px;
 	padding-right: 20px;
 	text-decoration: none;
+}
+nav a:hover {
+	color: #FFFFFF;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+}
+nav div{
+	justify-content: space-between;
+	display: flex;
+	max-height: 30px;
+}
+nav div img{
+	max-height: 30px;
+}
+body{
+	margin: 0px;
 }
