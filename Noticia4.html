@@ -6,31 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="stylesheet" type="text/css" href="CSS/Noticia.css">
-
-    <script>document.addEventListener("DOMContentLoaded", function() {
+    <title>Noticia 4</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
 // Obtener los datos desde el almacenamiento local
-        const dat = localStorage.getItem('cadenaJSON');
-        const datos = JSON.parse(dat) || [];
+            const dat = localStorage.getItem('cadenaJSON');
+            const datos = JSON.parse(dat) || [];
 
 // Obtener la referencia al contenedor de datos en la página
-        const datosContainer = document.getElementById('datos-container');
+            const datosContainer = document.getElementById('datos-container');
 
-        let html = '';
+            let html = '';
 
 // Escribo el "html" personalizado
-        html = html +
-            '<br>' +
-            '<header><h1>'+datos[0].titulo+
-                '</h1></header>'+
-            '<li><b>Fecha:</b> ' + datos[0].fecha + '</li>' +
-            '<li><b>Categoría:</b> ' + datos[0].categoria + '</li>' +
-            '<li><b>Descripción:</b> ' + datos[0].descripcion + '</li>' +
-            '<li><b>Autor:</b> ' + datos[0].autor + '</li>'+
-            '<br>';
+            html = html +
+                '<br>' +
+                '<li><b>Fecha:</b> ' + datos[3].fecha + '</li>' +
+                '<li><b>Categoría:</b> ' + datos[3].categoria + '</li>' +
+                '<li><b>Descripción:</b> ' + datos[3].descripcion + '</li>' +
+                '<li><b>Autor:</b> ' + datos[3].autor + '</li>' +
+                '<li><h1>' + datos[3].titulo + '</h1></li>'+
+                '<br>';
 
 // Agregar el html generado al contenedor de datos en la página
-        datosContainer.innerHTML = html;});</script>
-    <title>Noticia 1</title>
+            datosContainer.innerHTML = html;});
+    </script>
 </head>
 <body>
 
@@ -43,7 +43,7 @@
                     Noticia Principal
                 </a>
             </li>
-            <li>
+            <li >
                 <a href="RSS.html">
                     Rss
                 </a>

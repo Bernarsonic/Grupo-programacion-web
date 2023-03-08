@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +8,13 @@
         <link rel="icon" href="Img/indice.ico">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <script src="JS/Rss.js" defer></script>
     </head>
 
     <body>
 
     <script src="JS/js.js"></script>
+
 
 
         <!-- BARRA NAVEGACIÓN -->
@@ -28,11 +30,11 @@
                                 Noticia
                             </a>
                         </li>
-                        <l >
-                            <a href="RSS.html">
+                        <li >
+                            <button onclick="generarRSS()">
                                 Rss
-                            </a>
-                        </l>
+                            </button>
+                        </li>
                         <li href="index.html">
                             <a>
                                 Suscripción
@@ -61,7 +63,7 @@
                                 Titulo
                             </label>
 
-                            <input type="text" class="form-control"  placeholder="Introduce el título" id="titulo" required pattern="([a-z A-Z]{1,50})">
+                            <label for="titulo"></label><input type="text" class="form-control" placeholder="Introduce el título" id="titulo" required pattern="([a-z A-Z]{1,50})">
 
                         </div>
 
@@ -71,7 +73,7 @@
                                 Descripción
                             </label>
 
-                            <input type="text" class="form-control"  placeholder="Introduce la descripción" id="descripcion" pattern="([a-z A-Z]{1,100})">
+                            <label for="descripcion"></label><input type="text" class="form-control" placeholder="Introduce la descripción" id="descripcion" pattern="([a-z A-Z]{1,100})">
 
                         </div>
 
@@ -81,7 +83,7 @@
                                 Link
                             </label>
 
-                            <input type="text" class="form-control"  placeholder="Inserta la URL" id="url">
+                            <label for="url"></label><input type="text" class="form-control" placeholder="Inserta la URL" id="url">
 
                         </div>
 
@@ -91,7 +93,7 @@
                                 Autor
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Inserta la autor" id="autor"pattern="([a-z A-Z]{1,50})">
+                            <label for="autor"></label><input type="text" class="form-control" placeholder="Inserta la autor" id="autor" pattern="([a-z A-Z]{1,50})">
 
                         </div>
 
@@ -101,7 +103,7 @@
                                 Categoria
                             </label>
 
-                            <input type="text" class="form-control" placeholder="Introduce la categoria" id="categoria">
+                            <label for="categoria"></label><input type="text" class="form-control" placeholder="Introduce la categoria" id="categoria">
 
                         </div>
 
@@ -111,7 +113,7 @@
                                 Fecha
                             </label>
 
-                            <input type="date" class="form-control" placeholder="Enter date" id="fecha">
+                            <label for="fecha"></label><input type="date" class="form-control" placeholder="Enter date" id="fecha">
 
                         </div>
 
@@ -140,9 +142,6 @@
                 </div>
 
             </div>
-
-        </div>
-
     </body>
 
 </html>
