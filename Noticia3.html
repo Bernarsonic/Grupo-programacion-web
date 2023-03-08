@@ -4,7 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Noticia.css">
+    <title>Noticia 3</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+// Obtener los datos desde el almacenamiento local
+            const dat = localStorage.getItem('cadenaJSON');
+            const datos = JSON.parse(dat) || [];
+
+// Obtener la referencia al contenedor de datos en la página
+            const datosContainer = document.getElementById('datos-container');
+
+            let html = '';
+
+// Escribo el "html" personalizado
+            html = html +
+                '<br>' +
+                '<header><h1>'+datos[2].titulo+
+                '</h1></header>'+
+                '<li><b>Fecha:</b> ' + datos[2].fecha + '</li>' +
+                '<li><b>Categoría:</b> ' + datos[2].categoria + '</li>' +
+                '<li><b>Descripción:</b> ' + datos[2].descripcion + '</li>' +
+                '<li><b>Autor:</b> ' + datos[2].autor + '</li>'+
+                '<br>';
+
+// Agregar el html generado al contenedor de datos en la página
+            datosContainer.innerHTML = html;});
+    </script>
 </head>
 <body>
 
@@ -13,8 +40,8 @@
         <img src="Img/indice.ico" id="imagen" alt="Logo">
         <ul>
             <li>
-                <a href="#">
-                    Noticia
+                <a href="Noticia.html">
+                    Noticia Principal
                 </a>
             </li>
             <li >
@@ -32,13 +59,6 @@
 </nav>
 
 <article>
-    <header>
-        <h1>
-            Noticias
-        </h1>
-    </header>
-
-
     <div id="datos-container"></div>
 </article>
 
