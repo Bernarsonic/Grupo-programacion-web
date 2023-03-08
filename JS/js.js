@@ -31,26 +31,24 @@ document.addEventListener("DOMContentLoaded", function() {
 // Guardar los datos actualizados en el localStorage
     localStorage.setItem('cadenaJSON', JSON.stringify(datosAnteriores));
 
-
+        document.getElementById("titulo").value = "";
+        document.getElementById("descripcion").value = "";
+        document.getElementById("url").value = "";
+        document.getElementById("autor").value = "";
+        document.getElementById("categoria").value = "";
+        document.getElementById("fecha").value = "";
         //imprime en la consola
         console.log(noticia)
     }
 
-    function borrar() {
-        const titulo = document.getElementById("titulo").value = "";
-        const descripcion = document.getElementById("descripcion").value = "";
-        const link = document.getElementById("url").value = "";
-        const autor = document.getElementById("autor").value = "";
-        const categoria = document.getElementById("categoria").value = "";
-        const fecha = document.getElementById("fecha").value = "";
-    }
+    function borrarLocalStorage() {
+        localStorage.clear();
+      }
 
     const botonSumit = document.getElementById('BotonS');
     botonSumit.addEventListener('click', coger_datos);
-    botonSumit.addEventListener('click', borrar);
-
 
     const botonVaciar = document.getElementById("BotonV");
-    botonVaciar.addEventListener('click', borrar);
+    botonVaciar.addEventListener('click', borrarLocalStorage);
 
 });
