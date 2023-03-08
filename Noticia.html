@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>
-        Noticias
-    </title>
-    <link rel="icon" href="Img/indice.ico">
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
-    <link rel="stylesheet" type="text/css" href="CSS/Noticia.css">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>
+            Noticias
+        </title>
+        <link rel="icon" href="Img/indice.ico">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <link rel="stylesheet" type="text/css" href="CSS/Noticia.css">
 
-</head>
-<body>
-<!-- BARRA NAVEGACIÓN -->
-<nav>
-    <div id="barra">
+    </head>
+    <body>
+    <!-- BARRA NAVEGACIÓN -->
+        <nav>
+            <div id="barra">
+                <img src="Img/indice.ico" id="imagen" alt="Logo">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Noticia
+                        </a>
+                    </li>
+                    <l >
+                        <a href="RSS.html">
+                            Rss
+                        </a>
+                    </l>
+                    <li>
+                        <a href="Supcricion.html">
+                            Suscripción
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-        <img src="Img/indice.ico" id="imagen" alt="Logo">
+    <article>
+            <header>
+                <h1>
+                    Noticias
+                </h1>
+            </header>
 
-        <ul>
 
-            <li>
-                <a href="#">
-                    Noticia
-                </a>
-            </li>
-            <l >
-                <a href="RSS.html">
-                    Rss
-                </a>
-            </l>
-            <li>
-                <a href="Supcricion.html">
-                    Suscripción
-                </a>
-            </li>
-        </ul>
+        <div id="datos-container"></div>
+        <script src="JS/recibir.js"></script>
+    </article>
 
-    </div>
-</nav>
-
-<div id="datos-container"></div>
-<script src="JS/recibir.js"></script>
-</body>
+    </body>
 </html>
