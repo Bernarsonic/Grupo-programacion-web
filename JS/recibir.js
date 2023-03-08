@@ -7,9 +7,14 @@ const datosContainer = document.getElementById('datos-container');
 
 let html = '';
 var enlace;
-console.log(datos);
+
 
 for(var a=0; a< 5; a++){
+    console.log(datos);
+    // Escribo el "html" personalizado
+
+
+
   if (a===0) {
 
       enlace = "noticia1.html"
@@ -31,18 +36,25 @@ for(var a=0; a< 5; a++){
       enlace = "noticia5.html"
 
   }
-  
 
-  // Escribo el "html" personalizado
-  html = html + `
-  <br>
-  <li><b>Fecha:</b> ${datos[a].fecha}</li>  
-  <li><b>Categoría:</b> ${datos[a].categoria}</li>
-  <li><b>Descripción:</b> ${datos[a].descripcion}</li>
-  <li><b>Autor:</b> ${datos[a].autor}</li>
-  <li><h1><a href="${enlace}">${datos[a].titulo}</a></h1></li>
-  `
-  ;
+
+
+
   }
+for(var b=0; b< datos.length; b++){
+    // Escribo el "html" personalizado
+    html = html + `
+  <br>
+  <li><h1><a href="${enlace}">${datos[b].titulo}</a></h1></li>
+  <li><b>Fecha:</b> ${datos[b].fecha}</li>  
+  <li><b>Categoría:</b> ${datos[b].categoria}</li>
+  <li><b>Descripción:</b> ${datos[b].descripcion}</li>
+  <li><b>Autor:</b> ${datos[b].autor}</li>
+  <br>
+  `
+    ;
+}
+
+
 // Agregar la plantilla al contenedor de datos
 datosContainer.innerHTML = html;
