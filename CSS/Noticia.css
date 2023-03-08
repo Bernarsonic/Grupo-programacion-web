@@ -15,4 +15,10 @@ article{
 #datos-container ul{
     display: flex;
     flex-direction: column-reverse;
+    list-style: none;
+}
+
+#datos-container ul h1{
+    display: flex;
+    justify-content: end;
 }
