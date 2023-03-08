@@ -9,53 +9,30 @@ let html = '';
 var enlace;
 console.log(datos);
 
-for (var a = datos.length - 5; a < datos.length; a++){
-  if(datos.length < 5){
-    if (a=== 0) {
+for(var a=0; a< 5; a++){
+  if (a===0) {
 
-      enlace = "Noticia1.html"
-  
-    } else if (a===1 ) {
-  
-        enlace = "Noticia2.html"
-  
-    } else if (a===2 ) {
-  
-        enlace = "Noticia3.html"
-  
-    } else if (a===3 ) {
-  
-        enlace = "Noticia4.html"
-  
-    } else if (a===4 ) {
-  
-        enlace = "Noticia5.html"
-  
-    }
-  }
-  else{
-    if (a=== datos.length - 5) {
+      enlace = "noticia1.html"
 
-      enlace = "Noticia1.html"
-  
-    } else if (a===datos.length - 4) {
-  
-        enlace = "Noticia2.html"
-  
-    } else if (a===datos.length - 3) {
-  
-        enlace = "Noticia3.html"
-  
-    } else if (a===datos.length - 2) {
-  
-        enlace = "Noticia4.html"
-  
-    } else if (a===datos.length - 1) {
-  
-        enlace = "Noticia5.html"
-  
-    }
+  } else if (a===1) {
+
+      enlace = "noticia2.html"
+
+  } else if (a===2) {
+
+      enlace = "noticia3.html"
+
+  } else if (a===3) {
+
+      enlace = "noticia4.html"
+
+  } else if (a===4) {
+
+      enlace = "noticia5.html"
+
   }
+  
+
   // Escribo el "html" personalizado
   html = html + `
   <br>

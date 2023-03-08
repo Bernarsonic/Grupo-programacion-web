@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             categoria: categoria,
             fecha: fecha,
         };
-        datosAnteriores.push(noticia);
+        datosAnteriores.unshift(noticia);
 
 
 // Guardar los datos actualizados en el localStorage
