@@ -29,42 +29,42 @@
                 <!-- Definimos el área del diseño de página que contiene el contenido de la página -->
                 <fo:flow flow-name="xsl-region-body">
 
-                    <!-- a -->
+                
                     <fo:block font-weight="bold" text-align="center" margin="5pt" font-family="Garamond" font-size="12px" color="#000000">
                         Trabajo para el caso PBL
                     </fo:block>
 
-                    <!-- a -->
+                  
                     <fo:block font-weight="bold" text-align="center" margin="5pt" font-family="Garamond" font-size="12px" color="#000000">
                         Sindicación de Contenidos con RSS
                     </fo:block>
 
-                    <!-- a -->
+                  
                     <fo:block font-weight="bold" text-align="center" margin="5pt" font-family="Garamond" font-size="12px" color="#000000">
                         Lenguajes de Marcas y Sistemas de Gestión de la Información
                     </fo:block>
 
-                    <!-- a -->
+                  
                     <fo:block font-weight="bold" text-align="center"
                               margin="5pt" font-family="Arial" text-decoration="underline" margin-top="20px" font-size="18px" color="#000000">
                         POOL DE NOTICIAS SINDICADAS
                     </fo:block>
 
-                    <!-- a -->
+                
                     <xsl:apply-templates select="item"/>
 
-                    <!-- a -->
+                 
                     <fo:block text-align="left" font-family="TimesNewRoman" font-size="12pt" font-weight="bold">
                         Componentes del grupo: Máximo Barcos Julián
                     </fo:block>
 
-                    <!-- a -->
+                   
                     <fo:block text-align="left" font-family="TimesNewRoman" font-size="12pt" font-weight="bold">
                         &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
                         &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bernardo José Millano
                     </fo:block>
 
-                    <!-- a -->
+                    
                     <fo:block text-align="left" font-family="TimesNewRoman" font-size="12pt" font-weight="bold">
                         &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
                         &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Antonio José Maqueda
