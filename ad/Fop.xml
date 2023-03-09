@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Antonio José Maqueda Vega -->
+
+<!--Configuración de hoja de estilo-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+    <!--Plantilla que se aplicara generalmente-->
+    <xsl:template match="/Cine">
+
+        <!-- Incializamos el elemento raiz -->
+        <fo:root>
+
+            <!-- Definimos el conjunto de diseños maestro de página -->
+            <fo:layout-master-set>
+
+                <!-- Con el diseño maestro fifamos el tamaño y los margenes -->
+                <fo:simple-page-master master-name="Pool" page-height="29.7cm" page-width="21.0cm" margin="2cm">
+
+                    <!-- Definimos una región en el diseño maestro de página que contendrá el contenido de la página -->
+                    <fo:region-body/>
+
+                </fo:simple-page-master>
+
+            </fo:layout-master-set>
+
+            <!-- Definimos una secuencia de página utilizando el diseño maestro de página -->
+            <fo:page-sequence master-reference="Pool">
+
+                <!-- Definimos el área del diseño de página que contiene el contenido de la página -->
+                <fo:flow flow-name="xsl-region-body">
+
+                    <!-- Definimos un bloque de texto centrado en la página con un tamaño de fuente de 24px -->
+                    <fo:block font-size="24" text-align="center">
+                        Listado de Películas
+                    </fo:block>
+
+                    <!-- Definimos una tabla con un borde negro de 2 píxeles, que ocupa el ancho  de la página y está centrada -->
+                    <fo:table border="2px solid black" width="100%" text-align="center">
+
+                        <!-- Definimos el cuerpo de la tabla -->
+                        <fo:table-body>
+
+                            <!--Por cada película aplicar plantilla-->
+                            <xsl:apply-templates select="/Cine/Películas/Película">
+
+                                <!--Ordenar por título-->
+                                <xsl:sort select="Título"/>
+
+                            </xsl:apply-templates>
+
+                        </fo:table-body>
+
+                    </fo:table>
+
+                </fo:flow>
+
+            </fo:page-sequence>
+
+        </fo:root>
+
+    </xsl:template>
+
+    <!--Plantilla que se aplicara en las Peliculas-->
+    <xsl:template match="/Cine/Películas/Película">
+
+        <!--Fila 1-->
+        <fo:table-row background-color="yellow" text-align="center" border="2px solid black">
+
+            <!--Columna 1-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block>
+                    Título
+                </fo:block>
+
+            </fo:table-cell>
+
+            <!--Columna 2-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block>
+                    Director
+                </fo:block>
+
+            </fo:table-cell>
+
+            <!--Columna 3-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block>
+                    Duración
+                </fo:block>
+
+            </fo:table-cell>
+
+            <!--Columna 4-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block>
+                    Metraje
+                </fo:block>
+
+            </fo:table-cell>
+
+        </fo:table-row>
+
+        <!--Fila 2-->
+        <fo:table-row text-align="center" border="2px solid black">
+
+            <!--Columna 1-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block><xsl:value-of select="Título"/>
+                </fo:block>
+
+            </fo:table-cell>
+
+            <!--Columna 2-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block>
+                    <xsl:value-of select="Director"/>
+                </fo:block>
+
+            </fo:table-cell>
+
+            <!--Columna 4-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Bloque de texto-->
+                <fo:block>
+                    <xsl:value-of select="Duración"/>
+                </fo:block>
+
+            </fo:table-cell>
+
+            <!--Columna 5-->
+            <fo:table-cell border="2px solid black">
+
+                <!--Utilizamos una estructura condicional para determinar la duración de la película-->
+                <xsl:choose>
+
+                    <!--Si la duración es menor a 90 minutos, mostrar Corto-->
+                    <xsl:when test="Duración &lt;90">
+
+                        <!-- Bloque de texto que contiene Corto -->
+                        <fo:block>
+                            Corto
+                        </fo:block>
+
+                    </xsl:when>
+
+                    <!--Si la duración es mayor a 90 minutos y menor a 120 minutos, mostrar "Mediana"-->
+                    <xsl:when test="Duración &gt; 90 and Duración &lt;120">
+
+                        <!-- Bloque de texto que contiene Mediana -->
+                        <fo:block>
+                            Mediana
+                        </fo:block>
+
+                    </xsl:when>
+
+                    <!--Si la duración es mayor a 120 minutos, mostrar "Largo"-->
+                    <xsl:when test="Duración &gt;120">
+
+                        <!-- Bloque de texto que contiene Largo -->
+                        <fo:block>
+                            Largo
+                        </fo:block>
+
+                    </xsl:when>
+
+                </xsl:choose>
+
+                <!-- Bloque de texto vacio para fines de formato -->
+                <fo:block>
+
+                </fo:block>
+
+            </fo:table-cell>
+
+        </fo:table-row>
+
+        <!--Fila 3-->
+        <fo:table-row text-align="center" border="2px solid black">
+
+            <!--Columna 1 que ocupa 4-->
+            <fo:table-cell background-color="yellow" border="2px solid black" number-columns-spanned="4">
+
+                <!-- Bloque de texto que contiene Argumento -->
+                <fo:block>
+                    Argumento
+                </fo:block>
+
+            </fo:table-cell>
+
+        </fo:table-row>
+
+        <!--Fila 4-->
+        <fo:table-row text-align="center" border="2px solid black">
+
+            <!--Columna 1 que ocupa 4-->
+            <fo:table-cell background-color="cyan" border="2px solid black" number-columns-spanned="4">
+
+                <!-- Bloque de texto para el Argumento de la Pelicula -->
+                <fo:block>
+
+                    <!-- Seleccionamos el valor del elemento Argumento de la Película actual -->
+                    <xsl:value-of select="Argumento"/>
+
+                </fo:block>
+
+            </fo:table-cell>
+
+        </fo:table-row>
+
+    </xsl:template>
+
+</xsl:stylesheet>
