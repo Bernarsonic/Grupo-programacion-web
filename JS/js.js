@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const titulo = document.getElementById("titulo").value;
         const descripcion = document.getElementById("descripcion").value;
         const link = document.getElementById("url").value;
+        const linkI = document.getElementById("urlFoto").value;
         const autor = document.getElementById("autor").value;
         const categoria = document.getElementById("categoria").value;
         const fecha = document.getElementById("fecha").value;
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             titulo: titulo,
             descripcion: descripcion,
             link: link,
+            linkI: linkI,
             autor: autor,
             categoria: categoria,
             fecha: fecha,
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("titulo").value = "";
         document.getElementById("descripcion").value = "";
         document.getElementById("url").value = "";
+        document.getElementById("urlFoto").value = "";
         document.getElementById("autor").value = "";
         document.getElementById("categoria").value = "";
         document.getElementById("fecha").value = "";

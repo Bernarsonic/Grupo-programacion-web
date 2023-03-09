@@ -5,8 +5,8 @@ const generarRSS = () => {
     rss += '<channel>\n';
     rss += '<title>Noticias</title>\n';
     rss += '<author>Autor</author>\n';
-    rss += '<category>Categoria</category>\n';
-    rss += '<date>Fecha</date>\n';
+    rss += '<section>Categoria</section>\n';
+    rss += '<pubDate>Fecha</pubDate>\n';
     rss += '<description>Noticias de ejemplo</description>\n';
 
     items.forEach((item) => {
@@ -15,8 +15,9 @@ const generarRSS = () => {
         rss += `<descripcion>${item.descripcion}</descripcion>\n`;
         rss += `<link>${item.link}</link>\n`;
         rss += `<autor>${item.autor}</autor>\n`;
-        rss += `<categoria>${item.categoria}</categoria>\n`;
-        rss += `<date>${item.fecha}</date>\n`;
+        rss += `<section>${item.categoria}</section>\n`;
+        rss += `<pubDate>${item.fecha}</pubDate>\n`;
+        rss += `<enclosure>${item.linkI}</enclosure>\n`;
         rss += '</item>\n';
     });
 
