@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Noticias</title>
+		<link>file:///C:/Users/damda/Desktop/grupo%20marcas/noticias.html</link>
+		<item>
+			<link>https://grupoilmgsi.000webhostapp.com/noticia1.html</link>
+			<section>Section5</section>
+			<title>Noticia5</title>
+			<author>Marcelo</author>
+			<pubDate>2023-03-03</pubDate>
+			<enclosure url="https://s.libertaddigital.com/2021/02/14/camara-reflex-nikon-d3500.jpg"/>
+			<description>Noticia5</description>
+		</item>
+		<item>
+			<link>https://grupoilmgsi.000webhostapp.com/noticia2.html</link>
+			<section>Section4</section>
+			<title>Noticia4</title>
+			<author>Alfonso</author>
+			<pubDate>2023-03-05</pubDate>
+			<enclosure url="https://indiehoy.com/wp-content/uploads/2022/05/naruto.jpg"/>
+			<description>Noticia4</description>
+		</item>
+		<item>
+			<link>https://grupoilmgsi.000webhostapp.com/noticia3.html</link>
+			<section>Section3</section>
+			<title>Noticia3</title>
+			<author>Manuel</author>
+			<pubDate>2023-03-04</pubDate>
+			<enclosure url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/400px-Cristiano_Ronaldo_2018.jpg"/>
+			<description>Noticia3</description>
+		</item>
+		<item>
+			<link>https://grupoilmgsi.000webhostapp.com/noticia4.html</link>
+			<section>Section2</section>
+			<title>Noticia2</title>
+			<author>Alejandro</author>
+			<pubDate>2023-03-04</pubDate>
+			<enclosure url="https://i.pinimg.com/474x/e3/30/ca/e330ca8fd26eeed3adc88e07aeabc066.jpg"/>
+			<description>Noticia2</description>
+		</item>
+		<item>
+			<link>https://grupoilmgsi.000webhostapp.com/noticia5.html</link>
+			<section>Section1</section>
+			<title>Noticia1</title>
+			<author>Alex</author>
+			<pubDate>2023-03-08</pubDate>
+			<enclosure url="https://productosdesevilla.com/wp-content/uploads/2021/01/betis.jpg"/>
+			<description>Noticia1</description>
+		</item>
+	</channel>
+</rss>
